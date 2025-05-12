@@ -29,4 +29,15 @@ public class MyGraph<T> {
         }
     }
 
+    public void printGraph() {
+        for (Vertex<T> vertex : vertices) {
+            System.out.print(vertex + " -> ");
+            for (var entry : vertex.getAdjacentVertices().entrySet()) {
+                System.out.print(entry.getKey() + "(" + entry.getValue() + ") ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
